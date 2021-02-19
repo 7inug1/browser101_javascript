@@ -1,0 +1,59 @@
+/*
+Name: Jinwook Shin
+Date: 2/19/2021
+How to:
+
+*/
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <style>
+      body{
+        background-color: black;
+        text-align: center;
+      }
+      
+      img{
+        display: block;
+        margin: auto;
+      }
+
+      button{
+        background-color: rgb(199, 66, 66);
+        color: white;
+        outline: none;
+        cursor: pointer;
+        font-size: 32px;
+        margin: 16px 0;
+        padding-bottom: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="locateRabbitButton">go to rabbit</button>
+    <img src="img/carrot.png" alt="carrot"></img>
+    <!-- <div id="rabbit"></div> -->
+    <img src="img/carrot.png" alt="carrot"></img>
+    <img src="img/carrot.png" alt="carrot"></img>
+    <img src="img/carrot.png" alt="carrot"></img>
+    <img src="img/carrot.png" alt="carrot"></img>
+    <img src="img/carrot.png" alt="carrot"></img>
+    <img id="rabbit" src="img/rabbit.png" alt="rabbit"></img>
+    <img src="img/carrot.png" alt="carrot"></img>
+    <img src="img/carrot.png" alt="carrot"></img>
+    <img src="img/carrot.png" alt="carrot"></img>
+    <script>
+      const carrot = document.querySelector('.carrot');
+      const rabbit = document.querySelector('#rabbit');
+      const button = document.querySelector('#locateRabbitButton');
+      button.addEventListener('click', ()=>{
+        // console.log(rabbit.getBoundingClientRect());
+        rabbit.scrollIntoView({behavior: 'smooth', block: 'center'})
+      })
+    </script>
+  </body>
+</html>
